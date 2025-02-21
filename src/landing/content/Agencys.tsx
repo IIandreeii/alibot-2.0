@@ -1,5 +1,4 @@
-import React from "react";
-import Carousel from "../Components/Carousel";
+import Carousel from "../components/Carousel";
 
 export const Agencys = () => {
   return (

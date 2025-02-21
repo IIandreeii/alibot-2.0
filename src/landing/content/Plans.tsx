@@ -29,7 +29,7 @@ useEffect(()=>{
         Elige el plan <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-blue-700">correcto </span> para ti
       </h3>
 
-      <div className="flex items-center w-full justify-center text-white">
+      <div className="flex items-center w-full justify-center text-white ">
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="flex flex-col md:flex-row">
             <div className={`cardCustom p-4 rounded-lg m-2 ${select === 'Bas' ? 'cardClick' : ''}`} onClick={() => handleClick('Bas')}>
@@ -51,7 +51,7 @@ useEffect(()=>{
 
 
 
-            <div className={`relative cardCustom p-4 rounded-lg m-2  border-[6px] border-[#662483;] ${select === 'Pro' ? 'cardClick' : ''}`} onClick={() => handleClick('Pro')}>
+            <div className={`relative cardCustom rounded-lg m-2 border-[6px] border-[#662483;] ${select === 'Pro' ? 'cardClick' : ''}`} onClick={() => handleClick('Pro')}>
               <div className="text-sm font-semibold w-full text-center flex justify-center absolute left-0 right-0 top-[-5%]"><span className=' color-morado w-[50%] rounded-md flex items-center h-[30px] text-center justify-center'>Más popular</span></div>
               <h4 className="text-xl font-semibold">Profesional</h4>
               <h2 className="text-3xl font-bold">99 <span className="text-lg">USD</span></h2>
@@ -72,8 +72,8 @@ useEffect(()=>{
 
         </div>
 
-        <div className="mt-8 md:mt-0 md:ml-8 p-5 bg-[#2c2c2c] border-[2px] border-gray-600 rounded-lg">
-            <h5 className="text-xl text-white font-semibold pb-3 mb-3 border-b border-gray-600">Resumen de pedido</h5>
+        <div className="mt-8 md:mt-0 md:ml-8 p-10 bg-[#2c2c2c] border-[2px] border-gray-600 rounded-lg ">
+            <h5 className="text-2xl text-white font-semibold pb-3 mb-3 border-b border-gray-600">Resumen de pedido</h5>
             <p className="flex justify-between text-base text-white mb-5 gap-2" >
               Plan Prueba gratis
               <span className="flex items-center text-4xl md:text-2xl text-white">0 <small className="text-base ml-2">USD</small></span>
@@ -86,7 +86,7 @@ useEffect(()=>{
                 </span>
               </p>
             </div>
-            <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg">
+            <button className="mt-4 px-4 py-2 bg-white text-[#2c2c2c] rounded-lg w-full">
               <a href='https://www.skool.com/alibot/about' target='_blank' rel="noreferrer">Empezar ahora</a>
             </button>
           </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
@@ -16,12 +16,13 @@ const PrivacidadPage = () => {
   });
 
   return (
-    <div className="container mx-auto px-4">
+    <div className=" mx-auto">
       <Header />
-
-      <h2 className="text-2xl font-bold my-4">Política de privacidad</h2>
-      
-      <div className="bg-white p-6 rounded-lg shadow-md">
+      <div className='h-[20rem] text-white text-2xl font-bold my-4 flex justify-center items-center'>
+      <h2 className="text-4xl">Política de privacidad</h2>
+      </div>
+    
+      <div className="bg-white py-10 px-52 shadow-md text-gray-600 text-justify max-md:px-32">
         <div>
           <h4 className="text-lg font-semibold my-4">Introducción</h4>
           <p>

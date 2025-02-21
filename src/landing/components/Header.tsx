@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import imagen from '../../../public/assets/logo_white.png';
 interface Props {
   isPage?: boolean;
@@ -40,7 +40,7 @@ export const Header = ({isPage = true}: Props) => {
   };
 
   return (
-<div className={`w-full flex items-center fixed z-50 justify-between p-5 top-0 md:flex backdrop-filter backdrop-blur-lg ${isScrolled ? 'bg-black bg-opacity-10' : ''}`}>
+<div className={`w-full flex items-center fixed z-50 justify-between p-5 top-0 md:flex backdrop-filter backdrop-blur-lg ${isScrolled ? 'bg-[#00000042]' : ''}`}>
       <div className="flex items-center">
         <a href="https://alibot.app/" onClick={() => scrollToSection('home')}>
           <img

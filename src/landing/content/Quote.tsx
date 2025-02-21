@@ -1,4 +1,4 @@
-import { CtaButton } from "../Components/Button"
+import { CtaButton } from "../components/Button"
 
 export const Quote = () => {
   return (

@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
-import { Header } from '../Components/Header';
-import { Footer } from '../Components/Footer';
+import  { useEffect } from 'react'
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+
 
 const TerminosPage = () => {
   useEffect(() => {
@@ -16,12 +17,13 @@ const TerminosPage = () => {
     });
 
   return (
-    <div>
-      <Header />
-
-      <h2>Condiciones de uso</h2>
-      
-      <div>
+    <div className=" mx-auto">
+    <Header />
+    <div className='h-[20rem] text-white text-2xl font-bold my-4 flex justify-center items-center'>
+    <h2 className="text-4xl">Condiciones de uso</h2>
+    </div>
+  
+    <div className="bg-white py-10 px-52 shadow-md text-gray-600 text-justify max-md:px-32">
         <div>
           <h4 className="my-4">Agreement</h4>
           <p>
