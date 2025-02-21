@@ -1,0 +1,84 @@
+.container {
+    @apply
+    max-w-screen-xl
+    m-auto
+    px-6
+    py-5
+    md:px-24
+    ;
+    h3 {
+        @apply
+        text-3xl
+        font-semibold
+        mb-8
+        text-center
+        md:text-5xl	
+        ;
+        span {
+            @apply
+            text-3xl
+            font-semibold
+            text-primary-default
+            md:text-5xl	
+            ;
+        }
+    }
+
+    &Services {
+        @apply
+        flex
+        gap-9
+        flex-col
+        md:flex-row
+        md:gap-7
+        ;
+        > div {
+            @apply
+            flex-wrap
+            md:gap-5
+            md:p-3
+            ;
+            backdrop-filter: blur(15px);
+            border-radius: 12px;
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+
+            h5 {
+                @apply
+                text-xl
+                font-semibold
+                text-white
+                mb-5
+                ;   
+            }
+            p {
+                @apply
+                text-base
+                text-white
+                mb-10
+                ;
+            }
+            ul {
+                li {
+                    @apply
+                    text-base
+                    text-white
+                    ;
+                }
+            }
+
+            img {
+                @apply
+                w-9/12
+                ;
+            }
+
+            > div {
+                &:last-child {
+                    text-align: end;
+                }
+            }
+        }
+    }
+}

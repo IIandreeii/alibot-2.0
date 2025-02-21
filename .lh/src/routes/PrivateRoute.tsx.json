@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/routes/PrivateRoute.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1740154467409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1740154467409,
+            "name": "Commit-0",
+            "content": "import React, { useEffect, useState } from 'react';\nimport { Navigate } from 'react-router-dom';\nimport { useAuth } from '../context/AuthContext';\n\ninterface PrivateRouteProps {\n  children: React.ReactNode;\n}\n\nconst PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {\n  const { token } = useAuth(); \n  const [loading, setLoading] = useState(true); \n\n  useEffect(() => {\n    setLoading(false);\n  }, [token]);\n\n  if (loading) return <div>Cargando...</div>;\n  \n  if (!token) {\n    return <Navigate to=\"/login\" replace />;\n  }\n  \n  return <>{children}</>;\n};\n\nexport default PrivateRoute;\n"
+        }
+    ]
+}

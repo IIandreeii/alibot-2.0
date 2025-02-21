@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/pages/admin/components/footer/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1740153629476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740153634658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\n import { Container } from './styles'\n import { Link } from 'react-router-dom'\n import { useChatContext } from 'pages/chat/context/chat';\n-import { useChatContext } from 'pages/chat/context/chat';\n+import { useChatContext } from '../';\n \n export const Footer = () => {\n   const chatCtx = useChatContext();\n \n"
+                },
+                {
+                    "date": 1740153644703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\n import { Container } from './styles'\n import { Link } from 'react-router-dom'\n import { useChatContext } from 'pages/chat/context/chat';\n-import { useChatContext } from '../';\n+import { useChatContext } from '../../../../pages/';\n \n export const Footer = () => {\n   const chatCtx = useChatContext();\n \n"
+                },
+                {
+                    "date": 1740153650660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import React from 'react'\n+import { Container } from './styles'\n+import { Link } from 'react-router-dom'\n+import { useChatContext } from 'pages/chat/context/chat';\n+import { useChatContext } from '../../../../pages/chat/context/chat';\n+\n+export const Footer = () => {\n+  const chatCtx = useChatContext();\n+\n+  return (\n+    <Container>\n+      <Link to={'/init'} onClick={() => {\n+        chatCtx.setChatSelected(null);\n+      }}>\n+        <i className='pi pi-arrow-left'></i>\n+        Volver a chats\n+      </Link>\n+    </Container>\n+  )\n+}\n"
+                }
+            ],
+            "date": 1740153629476,
+            "name": "Commit-0",
+            "content": "import React from 'react'\nimport { Container } from './styles'\nimport { Link } from 'react-router-dom'\nimport { useChatContext } from 'pages/chat/context/chat';\nimport { useChatContext } from 'pages/chat/context/chat';\n\nexport const Footer = () => {\n  const chatCtx = useChatContext();\n\n  return (\n    <Container>\n      <Link to={'/init'} onClick={() => {\n        chatCtx.setChatSelected(null);\n      }}>\n        <i className='pi pi-arrow-left'></i>\n        Volver a chats\n      </Link>\n    </Container>\n  )\n}\n"
+        }
+    ]
+}

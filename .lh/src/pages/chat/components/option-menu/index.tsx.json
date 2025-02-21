@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/pages/chat/components/option-menu/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1740155473144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740155480669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import { useState } from \"react\";\n-import Icon from \"../../../common/components/icons\";\n+import Icon from \"../../../../common/components/icons\";\n import useCloseMenu from \"../../hooks/useCloseMenu\";\n import { Container, Button, Options, Option } from \"./styles\";\n import { useNavigate } from \"react-router-dom\";\n-import { useAuth } from \"context/AuthContext\";\n+import { useAuth } from \"../../context/AuthContext\";\n \n type OptionsMenuProps = {\n   iconClassName?: string;\n   className?: string;\n"
+                },
+                {
+                    "date": 1740155488183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Icon from \"../../../../common/components/icons\";\n import useCloseMenu from \"../../hooks/useCloseMenu\";\n import { Container, Button, Options, Option } from \"./styles\";\n import { useNavigate } from \"react-router-dom\";\n-import { useAuth } from \"../../context/AuthContext\";\n+import { useAuth } from \"../../../../context/AuthContext\";\n \n type OptionsMenuProps = {\n   iconClassName?: string;\n   className?: string;\n"
+                }
+            ],
+            "date": 1740155473144,
+            "name": "Commit-0",
+            "content": "import { useState } from \"react\";\nimport Icon from \"../../../common/components/icons\";\nimport useCloseMenu from \"../../hooks/useCloseMenu\";\nimport { Container, Button, Options, Option } from \"./styles\";\nimport { useNavigate } from \"react-router-dom\";\nimport { useAuth } from \"context/AuthContext\";\n\ntype OptionsMenuProps = {\n  iconClassName?: string;\n  className?: string;\n  iconId: string;\n  ariaLabel?: string;\n  options: string[];\n  position?: string;\n  showPressed?: boolean;\n  [x: string]: any;\n};\n\nexport default function OptionsMenu(props: OptionsMenuProps) {\n  const [showOptions, setShowOptions] = useState(false);\n  \n  const navigate = useNavigate();\n  const ref = useCloseMenu(() => setShowOptions(false));\n  const {\n    iconId,\n    options,\n    ariaLabel,\n    className,\n    iconClassName,\n    position = \"left\",\n    showPressed = true,\n  } = props;\n\n  const getBtnClassName = (): string => {\n    let _className = showOptions && showPressed ? \"btn-pressed \" : \"\";\n    _className += className ?? \"\";\n\n    return _className;\n  };\n\n  const getOptionsClassName = (): string => {\n    let className = showOptions ? \"active \" : \"\";\n    className += position === \"right\" ? \"right\" : \"\";\n\n    return className;\n  };\n\n  const handleClick = () => {\n    setShowOptions(!showOptions);\n  };\n\n  const onRedirect = () => {\n    navigate('/admin');\n  }\n\n  \n  const { logout } = useAuth();\n\n  const onLogout = () => {\n    logout();\n    navigate(\"/login\");\n  }\n\n  return (\n    <Container ref={ref}>\n      <Button aria-label={ariaLabel} className={getBtnClassName()} onClick={handleClick}>\n        <Icon id={iconId} className={iconClassName} />\n      </Button>\n      \n      <Options className={getOptionsClassName()}>\n        <Option onClick={() => onRedirect()}>{'Configuracion'}</Option>\n\n        {options.map((option) => (\n          <Option key={option} onClick={() => onLogout()}>{option}</Option>\n        ))}\n        \n      </Options>\n    </Container>\n  );\n}\n"
+        }
+    ]
+}

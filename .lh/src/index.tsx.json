@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1740154698247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740154705567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { Suspense } from \"react\";\n import ReactDOM from \"react-dom/client\";\n import App from \"./App\";\n-import GlobalStyle from \"global-styles\";\n-import AppThemeProvider from \"common/theme\";\n+import GlobalStyle from \"./global-styles\";\n+import AppThemeProvider from \"./common/theme\";\n import { MainPageLoader } from \"common/components/loader\";\n \n const root = ReactDOM.createRoot(document.getElementById(\"root\") as HTMLElement);\n root.render(\n"
+                },
+                {
+                    "date": 1740160932453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import ReactDOM from \"react-dom/client\";\n import App from \"./App\";\n import GlobalStyle from \"./global-styles\";\n import AppThemeProvider from \"./common/theme\";\n-import { MainPageLoader } from \"common/components/loader\";\n+import { MainPageLoader } from \"./common/components/loader\";\n+@import \"tailwindcss\";\n \n const root = ReactDOM.createRoot(document.getElementById(\"root\") as HTMLElement);\n root.render(\n   <AppThemeProvider>\n"
+                }
+            ],
+            "date": 1740154698247,
+            "name": "Commit-0",
+            "content": "import { Suspense } from \"react\";\nimport ReactDOM from \"react-dom/client\";\nimport App from \"./App\";\nimport GlobalStyle from \"global-styles\";\nimport AppThemeProvider from \"common/theme\";\nimport { MainPageLoader } from \"common/components/loader\";\n\nconst root = ReactDOM.createRoot(document.getElementById(\"root\") as HTMLElement);\nroot.render(\n  <AppThemeProvider>\n    <GlobalStyle />\n    <Suspense fallback={<MainPageLoader />}>\n      <App />\n    </Suspense>\n  </AppThemeProvider>\n);\n"
+        }
+    ]
+}

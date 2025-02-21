@@ -1,0 +1,141 @@
+.container {
+    @apply
+    max-w-screen-xl
+    px-6
+    py-10
+    md:px-24
+    m-auto
+    ;
+    h3 {
+        @apply
+        text-3xl
+        font-semibold
+        mb-5  // Ajustar el margen inferior del título si es necesario
+        text-white
+        text-center
+        lg:text-4xl	
+        md:text-5xl	
+        ;
+        span {
+            @apply
+            text-3xl
+            font-semibold
+            text-primary-default
+            md:text-5xl	
+            ;
+        }
+    }
+    &Content {
+        @apply
+        flex
+        flex-wrap
+        grid-cols-12	
+        gap-10
+        mt-10  // Reducir el margen superior del contenedor general
+        lg:gap-10
+        lg:grid
+        md:gap-5
+        ;
+        &_images {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            max-width: px;
+            overflow-y: hidden;
+            padding: 25px;
+            scroll-snap-type: x mandatory;
+            width: 100%;
+            @apply 
+                lg:gap-5
+                md:gap-4
+                lg:p-0
+                md:p-0
+                col-span-8
+                flex-wrap
+            ;
+            > div {
+                img {
+                    @apply
+                    w-full
+                    h-fit
+                    md:h-[450px]
+                    md:w-[253.5px]
+                    ;
+                    border-radius: 18px;
+                    cursor: pointer;
+                    transition: transform .3s ease;
+                }
+            }
+        }
+        &_info {
+            @apply
+            col-span-4
+            mt-20 // Ajustar el margen superior de las estadísticas si es necesario
+            
+            ;
+            h5 {
+                @apply
+                text-2xl	
+                font-semibold
+                mb-5
+                text-white
+                md:text-4xl
+                ;   
+            }
+            > div {
+                p {
+                    @apply
+                    flex
+                    items-center
+                    text-base	
+                    mb-5
+                    text-white
+                    ;
+                    svg {
+                        height: 100%;
+                        max-height: 70px;
+                        max-width: 70px;
+                        width: 100%;
+                        @apply
+                        mr-2
+                        ;
+                        text {
+                            fill: white;
+                            @apply
+                            text-xl;
+                        }
+                        circle {
+                            &:nth-child(2) {
+                                stroke: #fff0;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    small {
+                        @apply
+                        text-sm	
+                        text-white
+                        ;
+                    }
+                    p {
+                        @apply
+                        text-sm	
+                        text-white
+                        mt-5
+                        gap-2
+                        ;
+                        > div {
+                            background: #ffc525;
+                            -webkit-clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                            clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                            height: 14px;
+                            width: 10.61px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.custom-blur {
+    width: fit-content;
+    margin: auto;
+    align-items: center;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid #fff;
+    border-radius: 24px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 30px;
+  }
+  .cardCustom {
+    transition: all 0.25s ease-out;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    background: #2c2c2c;
+  }
+  
+  .cardCustom:hover {
+    box-shadow: 0 25px 15px 0px #1b181833;
+    transform: translateY(-10px);
+  }
+  
+  .cardClick {
+    background: #260d31;
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+  }
+  
+  .cardClickPro {
+    background: #260d31;
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+  }
+  .color-morado{
+    background: linear-gradient(90deg,#662483 30.19%,#2d2e83 97.43%);
+  }
+  
+  .columns{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    grid-column: span 8 / span 8;
+    justify-content: center;
+    max-width: px;
+    overflow-y: hidden;
+    padding: 25px;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+}

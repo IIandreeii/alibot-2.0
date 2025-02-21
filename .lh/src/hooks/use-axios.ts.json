@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/hooks/use-axios.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1740157182490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740157198324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { useState } from 'react';\n-import axios, { AxiosRequestConfig, Method } from 'axios';\n+import axios, { Method } from 'axios';\n+import { AxiosRequestConfig } from 'axios';\n import { environment } from '../environments/environment.prod';\n-import { useToast } from 'context/ToastContext';\n+import { useToast } from '../context/ToastContext';\n \n axios.defaults.baseURL = environment.apiUrl;\n \n interface IAxiosParams {\n"
+                },
+                {
+                    "date": 1740157262403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import { useState } from 'react';\n-import axios, { Method } from 'axios';\n-import { AxiosRequestConfig } from 'axios';\n-import { environment } from '../environments/environment.prod';\n-import { useToast } from '../context/ToastContext';\n+import axios, { type AxiosRequestConfig, type Method } from 'axios';\n+import { environment } from '../../environments/environment.prod';\n+import { useToast } from '../../login/context/toastContext';\n \n axios.defaults.baseURL = environment.apiUrl;\n \n interface IAxiosParams {\n"
+                },
+                {
+                    "date": 1740157268079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { useState } from 'react';\n-import axios, { type AxiosRequestConfig, type Method } from 'axios';\n-import { environment } from '../../environments/environment.prod';\n-import { useToast } from '../../login/context/toastContext';\n+import axios, { Method } from 'axios';\n+import { AxiosRequestConfig } from 'axios';\n+import { environment } from '../environments/environment.prod';\n+import { useToast } from '../context/ToastContext';\n \n axios.defaults.baseURL = environment.apiUrl;\n \n interface IAxiosParams {\n"
+                },
+                {
+                    "date": 1740157276381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import { useState } from 'react';\n-import axios, { Method } from 'axios';\n-import { AxiosRequestConfig } from 'axios';\n+import axios, { AxiosRequestConfig, Method } from 'axios';\n import { environment } from '../environments/environment.prod';\n-import { useToast } from '../context/ToastContext';\n+import { useToast } from 'context/ToastContext';\n \n axios.defaults.baseURL = environment.apiUrl;\n \n interface IAxiosParams {\n"
+                }
+            ],
+            "date": 1740157182490,
+            "name": "Commit-0",
+            "content": "import { useState } from 'react';\nimport axios, { AxiosRequestConfig, Method } from 'axios';\nimport { environment } from '../environments/environment.prod';\nimport { useToast } from 'context/ToastContext';\n\naxios.defaults.baseURL = environment.apiUrl;\n\ninterface IAxiosParams {\n  method: Method | string;\n  url: string;\n  data?: unknown;\n  params?: unknown;\n  token?: string;\n  baseUrl?: string;\n}\n\nexport const useAxios = <T>() => {\n  const [response, setResponse] = useState<T | undefined>(undefined);\n  const [error, setError] = useState<unknown | null>(null);\n  const [loading, setLoading] = useState<boolean>(false);\n  const { showError } = useToast();\n\n  const execute = async (axiosParams: IAxiosParams): Promise<T | undefined> => {\n    const axiosRequestConfig: AxiosRequestConfig = {\n      method: axiosParams.method,\n      url: axiosParams.url,\n      params: axiosParams.params,\n      data: axiosParams.data,\n    };\n  \n    if (axiosParams.baseUrl) {\n      axiosRequestConfig.baseURL = axiosParams.baseUrl;\n    }\n  \n    setLoading(true);\n    setError(null);\n  \n    try {\n      const responseFetch = await axios.request(axiosRequestConfig);\n      \n      if (responseFetch.status === 200 || responseFetch.status === 201) {\n        setResponse(responseFetch.data);\n        return responseFetch.data; \n      } else {\n        showError(responseFetch.data.message);\n        return undefined; \n      }\n    } catch (error: any) {\n      if (error.response) {\n        showError(error.response.data.message.message || error.response.data.message);\n        setResponse(error.response.data);\n        return error.response.data;\n      }\n      \n      return undefined;\n    } finally {\n      setLoading(false);\n    }\n  };\n  \n\n  return {\n    execute,\n    response,\n    error,\n    loading,\n  };\n};\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/chat/unselected-page/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1740156453292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740156463801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import ChatLayout from \"../layouts\";\n-import Icon from \"../../common/components/icons\";\n-import { useAppTheme } from \"common/theme\";\n+import Icon from \"../../../common/components/icons\";\n+import { useAppTheme } from \"./../../../common/theme\";\n import { Container, ImageWrapper, Title, IconWrapper, Link, Image, Text } from \"./styles\";\n import useIsDesktop from \"../hooks/useWindowSize\";\n \n export default function UnSelectedChatPage() {\n"
+                }
+            ],
+            "date": 1740156453292,
+            "name": "Commit-0",
+            "content": "import ChatLayout from \"../layouts\";\nimport Icon from \"../../common/components/icons\";\nimport { useAppTheme } from \"common/theme\";\nimport { Container, ImageWrapper, Title, IconWrapper, Link, Image, Text } from \"./styles\";\nimport useIsDesktop from \"../hooks/useWindowSize\";\n\nexport default function UnSelectedChatPage() {\n  const theme = useAppTheme();\n  const isDesktop = useIsDesktop();\n\n  const getImageURL = () => {\n    if (theme.mode === \"light\") return \"/assets/logo.png\";\n    return \"/assets/logo_white.png\";\n  };\n\n\n  return (\n    <ChatLayout>\n      {\n        isDesktop && <Container>\n        <ImageWrapper>\n          <Image src={getImageURL()} />\n        </ImageWrapper>\n        <Title> Alibot Web </Title>\n        <Text>\n          ©2024 Alibot SAC Todos Derechos Reservados\n        </Text>\n      </Container>\n      }\n      \n    </ChatLayout>\n  );\n}\n"
+        }
+    ]
+}

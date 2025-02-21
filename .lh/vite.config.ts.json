@@ -1,0 +1,26 @@
+{
+    "sourceFile": "vite.config.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1740160761177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740160774297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { defineConfig } from 'vite'\n-import tailwindcss from '@tailwindcss/vite'\n+@import \"tailwindcss\";\n export default defineConfig({\n   plugins: [\n     tailwindcss(),\n   ],\n"
+                },
+                {
+                    "date": 1740160795923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { defineConfig } from 'vite'\n-@import \"tailwindcss\";\n+import tailwindcss from '@tailwindcss/vite'\n export default defineConfig({\n   plugins: [\n     tailwindcss(),\n   ],\n\\ No newline at end of file\n-}\n+})\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1740160761177,
+            "name": "Commit-0",
+            "content": "import { defineConfig } from 'vite'\nimport tailwindcss from '@tailwindcss/vite'\nexport default defineConfig({\n  plugins: [\n    tailwindcss(),\n  ],\n}"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/landing/components/Header.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1740161691081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740161704246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState, useEffect } from 'react';\r\n-import imagen from '../';\r\n+import imagen from '../../assets/';\r\n interface Props {\r\n   isPage?: boolean;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740161710171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState, useEffect } from 'react';\r\n-import imagen from '../../assets/';\r\n+import imagen from '../..';\r\n interface Props {\r\n   isPage?: boolean;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740161806189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState, useEffect } from 'react';\r\n-import imagen from '../..';\r\n+import imagen from '../';\r\n interface Props {\r\n   isPage?: boolean;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740161818177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState, useEffect } from 'react';\r\n-import imagen from '../';\r\n+import imagen from '../../../';\r\n interface Props {\r\n   isPage?: boolean;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1740161839723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState, useEffect } from 'react';\r\n-import imagen from '../../../';\r\n+import imagen from '../../../public/assets/';\r\n interface Props {\r\n   isPage?: boolean;\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1740161691080,
+            "name": "Commit-0",
+            "content": "import React, { useState, useEffect } from 'react';\r\nimport imagen from '../';\r\ninterface Props {\r\n  isPage?: boolean;\r\n}\r\n\r\nexport const Header = ({isPage = true}: Props) => {\r\n  const [isScrolled, setIsScrolled] = useState(false);\r\n\r\n  useEffect(() => {\r\n    if (isPage === false) {\r\n      return;\r\n    }\r\n    const handleScroll = () => {\r\n      if (window.scrollY > 90) {\r\n        setIsScrolled(true);\r\n      } else {\r\n        setIsScrolled(false);\r\n      }\r\n    };\r\n\r\n    window.addEventListener('scroll', handleScroll);\r\n\r\n    return () => {\r\n      window.removeEventListener('scroll', handleScroll);\r\n    };\r\n  }, []);\r\n\r\n  const scrollToSection = (id: string) => {\r\n    const element = document.getElementById(id);\r\n    if (element) {\r\n      setTimeout(() => {\r\n        const offset = element.getBoundingClientRect().top + window.scrollY - 100; \r\n        window.scrollTo({\r\n          top: offset,\r\n          behavior: 'smooth'\r\n        });\r\n      }, 50); \r\n    }\r\n  };\r\n\r\n  return (\r\n<div className={`w-full flex items-center fixed z-50 justify-between p-5 top-0 md:flex backdrop-filter backdrop-blur-lg ${isScrolled ? 'bg-black bg-opacity-10' : ''}`}>\r\n      <div className=\"flex items-center\">\r\n        <a href=\"https://alibot.app/\" onClick={() => scrollToSection('home')}>\r\n          <img\r\n            src={imagen}\r\n            alt=\"Logo\"\r\n            className=\"h-14 w-auto\"\r\n          />\r\n        </a>\r\n      </div>\r\n      <div className=\"flex w-full justify-between text-white max-md:justify-center max-md:w-1/2\">\r\n        <ul className=\"flex items-center gap-10 first:ml-20 max-md:ml-0 first:max-md:hidden\">\r\n          <li className=\"cursor-pointer\">\r\n            <a href=\"#faq\" onClick={() => scrollToSection('faq')}>Preguntas frecuentes</a>\r\n          </li>\r\n          <li className=\"cursor-pointer\">\r\n            <a href=\"#plans\" onClick={() => scrollToSection('plans')}>Precio</a>\r\n          </li>\r\n        </ul>\r\n\r\n        <ul className=\"flex items-center gap-10\">\r\n          <li>\r\n            <button className=\"text-white max-md:p-0 px-4 py-2 backdrop-filter backdrop-blur-lg bg-gradient-to-r from-purple-700 to-purple-700 rounded-lg\">\r\n              <a href='https://alibot.app/login' target='_blank'>Iniciar Sesión</a>\r\n            </button>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  );\r\n};"
+        }
+    ]
+}

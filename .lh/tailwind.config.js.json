@@ -1,0 +1,18 @@
+{
+    "sourceFile": "tailwind.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1740161040832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1740161040832,
+            "name": "Commit-0",
+            "content": "module.exports = {\r\n    content: [\r\n      \"./src/**/*.{html,ts,scss}\",\r\n    ],\r\n    theme: {\r\n      extend: {\r\n        fontFamily: {\r\n          serif: [\"DM Serif Display\", 'serif'],\r\n          sans: [\"DM Sans\", 'sans-serif'],\r\n        },\r\n        colors: {\r\n          primary: {\r\n            light: '#67e8f9',\r\n            default: '#ffc525',\r\n            dark: '#5D5D77',\r\n            darkDefault: '#23303B',\r\n            black: '#181726'\r\n          },\r\n          secondary: {\r\n            light: '#ECE7F8',\r\n            light80: '#B49EE3',\r\n            light20: '#ECE7F8',\r\n            default: '#A186DC',\r\n            dark: '#353455',\r\n            purple: '#C7B6EA',\r\n            purple80: '#5D5D77',\r\n          },\r\n          status: {\r\n            error: '#DA4100'\r\n          }\r\n        },\r\n        keyframes: {\r\n          scroll: {\r\n            '0%': { transform: 'translateX(0)' },\r\n            '100%': { transform: 'translateX(calc(-250px * 7))' },\r\n          },\r\n        },\r\n        animation: {\r\n          scroll: 'scroll 40s linear infinite',\r\n        },\r\n      },\r\n    },\r\n    plugins: [],\r\n  }\r\n  "
+        }
+    ]
+}

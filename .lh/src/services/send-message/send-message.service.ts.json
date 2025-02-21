@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/services/send-message/send-message.service.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1740154782914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740154796245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { useAxios } from '../../hooks/use-axioshooks/use-axios'\n+import { useAxios } from 'hooks/use-axios'\n import { IMessage } from './message.interface'\n \n export const useSendMessage = () => {\n   const { execute, response, loading } = useAxios<IMessage>()\n"
+                }
+            ],
+            "date": 1740154782914,
+            "name": "Commit-0",
+            "content": "import { useAxios } from './hooks/use-axios'\nimport { IMessage } from './message.interface'\n\nexport const useSendMessage = () => {\n  const { execute, response, loading } = useAxios<IMessage>()\n  \n  const sendMessage = (data: any) => {\n    const method = 'POST'\n    const url = '/webhook/send-message-whatsapp'\n    const temp = Object.assign({}, data)\n      \n    execute({\n      method,\n      url,\n      data: temp,\n    })\n  }\n  \n  return {\n    sendMessage,\n    loading,\n    message: response\n  }\n}"
+        }
+    ]
+}

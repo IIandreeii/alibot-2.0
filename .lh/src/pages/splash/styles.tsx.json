@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/pages/splash/styles.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1740155156308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740155163349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Icon from \"../common/components/icons\";\n+import Icon from \"../../common/components/icons\";\n import styled, { css } from \"styled-components\";\n \n export const Container = styled.div`\n   background: ${(props) => props.theme.splash.bg};\n"
+                },
+                {
+                    "date": 1740158033864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,19 @@\n import Icon from \"../../common/components/icons\";\n import styled, { css } from \"styled-components\";\n \n-export const Container = styled.div`\n-  background: ${(props) => props.theme.splash.bg};\n-  min-height: 100vh;\n-  display: flex;\n-  flex-direction: column;\n-  justify-content: center;\n-  align-items: center;\n-`;\n+export const theme = {\n+  splash: {\n+    bg: '#f0f0f0',\n+    gradient: 'linear-gradient(90deg, rgba(0,216,187,1) 0%, rgba(0,216,187,0) 100%)',\n+    logoFill: '#000',\n+    progressBg: '#e0e0e0',\n+    progressAfterBg: '#00d8bb',\n+    titleColor: '#333',\n+    subTitleColor: '#666',\n+    iconColor: '#00d8bb',\n+  },\n+};\n \n export const LogoWrapper = styled.div`\n   position: relative;\n   img {\n"
+                },
+                {
+                    "date": 1740158155747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,17 @@\n     iconColor: '#00d8bb',\n   },\n };\n \n+export const Container = styled.div`\n+  background: ${(props) => props.theme.splash.bg};\n+  min-height: 100vh;\n+  display: flex;\n+  flex-direction: column;\n+  justify-content: center;\n+  align-items: center;\n+`;\n+\n export const LogoWrapper = styled.div`\n   position: relative;\n   img {\n     height: 90px;\n@@ -26,9 +35,9 @@\n     left: -100px;\n     bottom: 0;\n     top: 0;\n     width: 100px;\n-    background: ${(props) => props.theme.splash.gradient}\n+    background: ${(props) => props.theme.splash.gradient};\n     animation: glisten 2s ease-in 0.8s infinite;\n   }\n \n   @keyframes glisten {\n@@ -60,9 +69,8 @@\n   &::after {\n     content: \"\";\n     position: absolute;\n     height: 100%;\n-    /* background: rgb(0, 216.5, 187.0288); */\n     background: ${(props) => props.theme.splash.progressAfterBg};\n     transition: width 2s linear;\n \n     ${(props) => css`\n@@ -92,5 +100,5 @@\n \n   &:hover {\n     text-decoration: revert-layer;\n   }\n-`;\n+`;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1740155156308,
+            "name": "Commit-0",
+            "content": "import Icon from \"../common/components/icons\";\nimport styled, { css } from \"styled-components\";\n\nexport const Container = styled.div`\n  background: ${(props) => props.theme.splash.bg};\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n`;\n\nexport const LogoWrapper = styled.div`\n  position: relative;\n  img {\n    height: 90px;\n  }\n\n  &::after {\n    content: \"\";\n    position: absolute;\n    left: -100px;\n    bottom: 0;\n    top: 0;\n    width: 100px;\n    background: ${(props) => props.theme.splash.gradient}\n    animation: glisten 2s ease-in 0.8s infinite;\n  }\n\n  @keyframes glisten {\n    from {\n      transform: translateX(0);\n    }\n    to {\n      transform: translateX(150px);\n    }\n  }\n`;\n\nexport const Logo = styled(Icon)`\n  z-index: 3;\n  fill: ${(props) => props.theme.splash.logoFill};\n  width: 60px;\n  height: 60px;\n`;\n\nexport const Progress = styled.div<{ progess: number }>`\n  width: 200px;\n  max-width: 400px;\n  height: 4px;\n  width: 90%;\n  margin: 20px auto 30px;\n  background: ${(props) => props.theme.splash.progressBg};\n  position: relative;\n\n  &::after {\n    content: \"\";\n    position: absolute;\n    height: 100%;\n    /* background: rgb(0, 216.5, 187.0288); */\n    background: ${(props) => props.theme.splash.progressAfterBg};\n    transition: width 2s linear;\n\n    ${(props) => css`\n      width: ${props.progess}%;\n    `};\n  }\n`;\n\nexport const Title = styled.h1`\n  color: ${(props) => props.theme.splash.titleColor};\n  font-size: 1.1rem;\n  font-weight: 500;\n  margin-bottom: 10px;\n`;\n\nexport const SubTitle = styled.p`\n  color: ${(props) => props.theme.splash.subTitleColor};\n  font-size: 0.85rem;\n`;\n\nexport const EncryptionIcon = styled(Icon)`\n  color: ${(props) => props.theme.splash.iconColor};\n`;\n\nexport const Link = styled.a`\n  text-decoration: revert-layer;\n\n  &:hover {\n    text-decoration: revert-layer;\n  }\n`;\n"
+        }
+    ]
+}

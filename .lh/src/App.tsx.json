@@ -1,0 +1,142 @@
+{
+    "sourceFile": "src/App.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1740154592906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740154598389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\n import AppRoutes from './routes'\n-import useAppLoad from 'common/hooks/useAppLoad'\n+import useAppLoad from '../common/hooks/useAppLoad'\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('pages/splash'))\n \n"
+                },
+                {
+                    "date": 1740154603881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\n import AppRoutes from './routes'\n-import useAppLoad from '../common/hooks/useAppLoad'\n+import useAppLoad from '../../../common/hooks/useAppLoad'\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('pages/splash'))\n \n"
+                },
+                {
+                    "date": 1740154613538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import React from 'react'\n import AppRoutes from './routes'\n import useAppLoad from '../../../common/hooks/useAppLoad'\n+import useAppLoad from '../../../common/hooks/useAppLoad'\n import \"./styles.scss\";\n \n-const SplashPage = React.lazy(() => import('pages/splash'))\n+const SplashPage = React.lazy(() => import('../pages/splash'))\n \n export default function App() {\n   const { isLoaded, progress } = useAppLoad()\n \n"
+                },
+                {
+                    "date": 1740154620726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\n import AppRoutes from './routes'\n import useAppLoad from '../../../common/hooks/useAppLoad'\n-import useAppLoad from '../../../common/hooks/useAppLoad'\n+import useAppLoad from '../../'\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../pages/splash'))\n \n"
+                },
+                {
+                    "date": 1740154627571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\n import AppRoutes from './routes'\n import useAppLoad from '../../../common/hooks/useAppLoad'\n-import useAppLoad from '../../'\n+import useAppLoad from '../../../../'\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../pages/splash'))\n \n"
+                },
+                {
+                    "date": 1740154636915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\n import AppRoutes from './routes'\n import useAppLoad from '../../../common/hooks/useAppLoad'\n-import useAppLoad from '../../../../'\n+import useAppLoad from '/'\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../pages/splash'))\n \n"
+                },
+                {
+                    "date": 1740154642940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\n import AppRoutes from './routes'\n import useAppLoad from '../../../common/hooks/useAppLoad'\n-import useAppLoad from '/'\n+import useAppLoad from '.../'\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../pages/splash'))\n \n"
+                },
+                {
+                    "date": 1740154655530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\n import AppRoutes from './routes'\n import useAppLoad from '../../../common/hooks/useAppLoad'\n-import useAppLoad from '.../'\n+import useAppLoad from '/'\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../pages/splash'))\n \n"
+                },
+                {
+                    "date": 1740154661722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\n import AppRoutes from './routes'\n import useAppLoad from '../../../common/hooks/useAppLoad'\n-import useAppLoad from '/'\n+import useAppLoad from '../'\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../pages/splash'))\n \n"
+                },
+                {
+                    "date": 1740154669469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\n import AppRoutes from './routes'\n import useAppLoad from '../../../common/hooks/useAppLoad'\n-import useAppLoad from '../'\n+import useAppLoad from '../src/common/hooks/useAppLoad'\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../pages/splash'))\n \n"
+                },
+                {
+                    "date": 1740154678161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import React from 'react'\n import AppRoutes from './routes'\n-import useAppLoad from '../../../common/hooks/useAppLoad'\n+\n import useAppLoad from '../src/common/hooks/useAppLoad'\n import \"./styles.scss\";\n \n-const SplashPage = React.lazy(() => import('../pages/splash'))\n+const SplashPage = React.lazy(() => import('../'))\n \n export default function App() {\n   const { isLoaded, progress } = useAppLoad()\n \n"
+                },
+                {
+                    "date": 1740154683917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n import useAppLoad from '../src/common/hooks/useAppLoad'\n import \"./styles.scss\";\n \n-const SplashPage = React.lazy(() => import('../'))\n+const SplashPage = React.lazy(() => import('../src/pages/'))\n \n export default function App() {\n   const { isLoaded, progress } = useAppLoad()\n \n"
+                },
+                {
+                    "date": 1740158333826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,27 @@\n-import React from 'react'\n-import AppRoutes from './routes'\n-\n-import useAppLoad from '../src/common/hooks/useAppLoad'\n+// filepath: /c:/Users/andree/Alibot-ubdate/src/App.tsx\n+import React from 'react';\n+import { ThemeProvider } from 'styled-components';\n+import AppRoutes from './routes';\n+import useAppLoad from '../src/common/hooks/useAppLoad';\n+import { theme } from './theme';\n import \"./styles.scss\";\n \n-const SplashPage = React.lazy(() => import('../src/pages/'))\n+const SplashPage = React.lazy(() => import('../src/pages/splash'));\n \n export default function App() {\n-  const { isLoaded, progress } = useAppLoad()\n+  const { isLoaded, progress } = useAppLoad();\n \n-  if (!isLoaded) return <SplashPage progress={progress} />\n-  return <AppRoutes />\n-}\n+  if (!isLoaded) {\n+    return (\n+      <ThemeProvider theme={theme}>\n+        <SplashPage progress={progress} />\n+      </ThemeProvider>\n+    );\n+  }\n+\n+  return (\n+    <ThemeProvider theme={theme}>\n+      <AppRoutes />\n+    </ThemeProvider>\n+  );\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1740158343350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react';\n import { ThemeProvider } from 'styled-components';\n import AppRoutes from './routes';\n import useAppLoad from '../src/common/hooks/useAppLoad';\n-import { theme } from './theme';\n+import { theme } from '..';\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../src/pages/splash'));\n \n"
+                },
+                {
+                    "date": 1740158358839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react';\n import { ThemeProvider } from 'styled-components';\n import AppRoutes from './routes';\n import useAppLoad from '../src/common/hooks/useAppLoad';\n-import { theme } from '..';\n+import { theme } from './common';\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../src/pages/splash'));\n \n"
+                },
+                {
+                    "date": 1740158378650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react';\n import { ThemeProvider } from 'styled-components';\n import AppRoutes from './routes';\n import useAppLoad from '../src/common/hooks/useAppLoad';\n-import { theme } from './common';\n+import theme from './common/theme';\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../src/pages/splash'));\n \n"
+                },
+                {
+                    "date": 1740158410665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react';\n import { ThemeProvider } from 'styled-components';\n import AppRoutes from './routes';\n import useAppLoad from '../src/common/hooks/useAppLoad';\n-import theme from './common/theme';\n+import { theme } from './common/theme';\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import('../src/pages/splash'));\n \n"
+                },
+                {
+                    "date": 1740158453680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +1,14 @@\n-// filepath: /c:/Users/andree/Alibot-ubdate/src/App.tsx\n-import React from 'react';\n-import { ThemeProvider } from 'styled-components';\n-import AppRoutes from './routes';\n-import useAppLoad from '../src/common/hooks/useAppLoad';\n-import { theme } from './common/theme';\n+import React from 'react'\n+import AppRoutes from './routes'\n+\n+import useAppLoad from '../src/common/hooks/useAppLoad'\n import \"./styles.scss\";\n \n-const SplashPage = React.lazy(() => import('../src/pages/splash'));\n+const SplashPage = React.lazy(() => import('../src/pages/splash'))\n \n export default function App() {\n-  const { isLoaded, progress } = useAppLoad();\n+  const { isLoaded, progress } = useAppLoad()\n \n-  if (!isLoaded) {\n-    return (\n-      <ThemeProvider theme={theme}>\n-        <SplashPage progress={progress} />\n-      </ThemeProvider>\n-    );\n-  }\n-\n\\ No newline at end of file\n-  return (\n-    <ThemeProvider theme={theme}>\n-      <AppRoutes />\n-    </ThemeProvider>\n-  );\n-}\n+  if (!isLoaded) return <SplashPage progress={progress} />\n+  return <AppRoutes />\n+}\n"
+                },
+                {
+                    "date": 1740158498301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,6 @@\n \n const SplashPage = React.lazy(() => import('../src/pages/splash'))\n \n export default function App() {\n-  const { isLoaded, progress } = useAppLoad()\n-\n-  if (!isLoaded) return <SplashPage progress={progress} />\n   return <AppRoutes />\n }\n"
+                },
+                {
+                    "date": 1740158526080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,9 @@\n \n const SplashPage = React.lazy(() => import('../src/pages/splash'))\n \n export default function App() {\n+  const { isLoaded, progress } = useAppLoad()\n+\n+  if (!isLoaded) return <SplashPage progress={progress} />\n   return <AppRoutes />\n }\n"
+                },
+                {
+                    "date": 1740158746712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,20 @@\n-import React from 'react'\n-import AppRoutes from './routes'\n-\n-import useAppLoad from '../src/common/hooks/useAppLoad'\n+import React, { Suspense } from \"react\";\n+import { ThemeProvider } from \"styled-components\";\n+import AppRoutes from \"./routes\";\n+import useAppLoad from \"../src/common/hooks/useAppLoad\";\n+import { theme } from \"./styles\"; // Asegúrate de importar bien el tema\n import \"./styles.scss\";\n \n-const SplashPage = React.lazy(() => import('../src/pages/splash'))\n+const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n export default function App() {\n-  const { isLoaded, progress } = useAppLoad()\n+  const { isLoaded, progress } = useAppLoad();\n \n-  if (!isLoaded) return <SplashPage progress={progress} />\n-  return <AppRoutes />\n+  return (\n+    <ThemeProvider theme={theme}>\n+      <Suspense fallback={<div>Cargando...</div>}>\n+        {!isLoaded ? <SplashPage progress={progress} /> : <AppRoutes />}\n+      </Suspense>\n+    </ThemeProvider>\n+  );\n }\n"
+                },
+                {
+                    "date": 1740158776993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { Suspense } from \"react\";\n import { ThemeProvider } from \"styled-components\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n-import { theme } from \"./styles\"; // Asegúrate de importar bien el tema\n+import { dar } from \"./styles\"; // Asegúrate de importar bien el tema\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n"
+                },
+                {
+                    "date": 1740158787647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n import React, { Suspense } from \"react\";\n import { ThemeProvider } from \"styled-components\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n-import { dar } from \"./styles\"; // Asegúrate de importar bien el tema\n+import { dark } from \"./styles\"; // Asegúrate de importar bien el tema\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n export default function App() {\n   const { isLoaded, progress } = useAppLoad();\n \n   return (\n-    <ThemeProvider theme={theme}>\n+    <ThemeProvider theme={dark}>\n       <Suspense fallback={<div>Cargando...</div>}>\n         {!isLoaded ? <SplashPage progress={progress} /> : <AppRoutes />}\n       </Suspense>\n     </ThemeProvider>\n"
+                },
+                {
+                    "date": 1740158800628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { Suspense } from \"react\";\n import { ThemeProvider } from \"styled-components\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n-import { dark } from \"./styles\"; // Asegúrate de importar bien el tema\n+import { dark } from \"..\"; // Asegúrate de importar bien el tema\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n"
+                },
+                {
+                    "date": 1740158808990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { Suspense } from \"react\";\n import { ThemeProvider } from \"styled-components\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n-import { dark } from \"..\"; // Asegúrate de importar bien el tema\n+import { dark } from \"../src/common/\"; // Asegúrate de importar bien el tema\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n"
+                },
+                {
+                    "date": 1740158824751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { Suspense } from \"react\";\n import { ThemeProvider } from \"styled-components\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n-import { dark } from \"../src/common/\"; // Asegúrate de importar bien el tema\n+import { dark  from \"../src/common/theme/dark\"; // Asegúrate de importar bien el tema\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n"
+                },
+                {
+                    "date": 1740158943983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,19 @@\n import React, { Suspense } from \"react\";\n-import { ThemeProvider } from \"styled-components\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n-import { dark  from \"../src/common/theme/dark\"; // Asegúrate de importar bien el tema\n+import AppThemeProvider from \"./theme\"; // Importamos el ThemeProvider personalizado\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n export default function App() {\n   const { isLoaded, progress } = useAppLoad();\n \n   return (\n-    <ThemeProvider theme={dark}>\n+    <AppThemeProvider>\n       <Suspense fallback={<div>Cargando...</div>}>\n         {!isLoaded ? <SplashPage progress={progress} /> : <AppRoutes />}\n       </Suspense>\n-    </ThemeProvider>\n+    </AppThemeProvider>\n   );\n }\n"
+                },
+                {
+                    "date": 1740158951613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React, { Suspense } from \"react\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n-import AppThemeProvider from \"./theme\"; // Importamos el ThemeProvider personalizado\n+import AppThemeProvider from \"../\"; // Importamos el ThemeProvider personalizado\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n"
+                },
+                {
+                    "date": 1740158957164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React, { Suspense } from \"react\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n-import AppThemeProvider from \"../\"; // Importamos el ThemeProvider personalizado\n+import AppThemeProvider from \"../src/common/\"; // Importamos el ThemeProvider personalizado\n import \"./styles.scss\";\n \n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n"
+                },
+                {
+                    "date": 1740163577045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,13 @@\n import React, { Suspense } from \"react\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n-import AppThemeProvider from \"../src/common/\"; // Importamos el ThemeProvider personalizado\n-import \"./styles.scss\";\n+import AppThemeProvider from \"../src/common/theme\"; // Importamos el ThemeProvider personalizado\n \n+\n+\n+git push -u origin main\n+\n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n export default function App() {\n   const { isLoaded, progress } = useAppLoad();\n"
+                },
+                {
+                    "date": 1740163585476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import React, { Suspense } from \"react\";\n import AppRoutes from \"./routes\";\n import useAppLoad from \"../src/common/hooks/useAppLoad\";\n import AppThemeProvider from \"../src/common/theme\"; // Importamos el ThemeProvider personalizado\n+import \"./styles.scss\";\n \n \n \n-git push -u origin main\n-\n+import \"./styles.scss\";\n const SplashPage = React.lazy(() => import(\"../src/pages/splash\"));\n \n export default function App() {\n   const { isLoaded, progress } = useAppLoad();\n"
+                }
+            ],
+            "date": 1740154592906,
+            "name": "Commit-0",
+            "content": "import React from 'react'\nimport AppRoutes from './routes'\nimport useAppLoad from 'common/hooks/useAppLoad'\nimport \"./styles.scss\";\n\nconst SplashPage = React.lazy(() => import('pages/splash'))\n\nexport default function App() {\n  const { isLoaded, progress } = useAppLoad()\n\n  if (!isLoaded) return <SplashPage progress={progress} />\n  return <AppRoutes />\n}\n"
+        }
+    ]
+}

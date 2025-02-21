@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/pages/chat/chat-room-page/components/select-custom/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1740156285335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740156295809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React, { useEffect, useState } from 'react';\n-import Icon from 'common/components/icons';\n+import Icon from '../../../../common/components/icons';\n import { Container, ContainerList } from './styles';\n-import { useChatContext } from '../pages/chat/context/chat';\n+import { useChatContext } from '../../../../../pages/chat/context/chat';\n import { usePhoneNumberWithLoader } from 'services/phone-number/getPhoneNumber.service';\n import { useTokenUser } from '../../hooks/useAuth';\n \n export const SelectCustom = () => {\n"
+                },
+                {
+                    "date": 1740156315118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useEffect, useState } from 'react';\n-import Icon from '../../../../common/components/icons';\n+import Icon from '../../../../../common/components/icons';\n import { Container, ContainerList } from './styles';\n import { useChatContext } from '../../../../../pages/chat/context/chat';\n import { usePhoneNumberWithLoader } from 'services/phone-number/getPhoneNumber.service';\n import { useTokenUser } from '../../hooks/useAuth';\n"
+                },
+                {
+                    "date": 1740156323694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { useEffect, useState } from 'react';\n import Icon from '../../../../../common/components/icons';\n import { Container, ContainerList } from './styles';\n import { useChatContext } from '../../../../../pages/chat/context/chat';\n-import { usePhoneNumberWithLoader } from 'services/phone-number/getPhoneNumber.service';\n+import { usePhoneNumberWithLoader } from '../../../../../services/phone-number/getPhoneNumber.service';\n import { useTokenUser } from '../../hooks/useAuth';\n \n export const SelectCustom = () => {\n   const { numberSelected, setNumberSelected, onChangeChat } = useChatContext();\n"
+                }
+            ],
+            "date": 1740156285335,
+            "name": "Commit-0",
+            "content": "import React, { useEffect, useState } from 'react';\nimport Icon from 'common/components/icons';\nimport { Container, ContainerList } from './styles';\nimport { useChatContext } from '../pages/chat/context/chat';\nimport { usePhoneNumberWithLoader } from 'services/phone-number/getPhoneNumber.service';\nimport { useTokenUser } from '../../hooks/useAuth';\n\nexport const SelectCustom = () => {\n  const { numberSelected, setNumberSelected, onChangeChat } = useChatContext();\n  const { getPhoneNumber, getResponse } = usePhoneNumberWithLoader();\n\n  const [hasAction, setHasAction] = useState(true)\n\n  const [showList, setShowList] = useState(false);\n  const [selectedText, setSelectedText] = useState(''); \n  const [dataResponse, setDataResponse] = useState<any>()\n  const { saveUserID, saveToken, initialToken, setInitialToken } = useTokenUser();\n  const [initialNumber, setinitialNumber] = useState('')\n\n  const getData = async () => {\n    const response = await getPhoneNumber();\n    if (response && response.length > 0 && initialToken === false) {\n      const filterData = response.filter((key:any) => key.phoneNumberId === numberSelected)[0];\n      const initialData = response[0]?.nickname + \" - \" + (response[0]?.phone || 'Sin número');\n      setinitialNumber(initialData);\n  \n      if (!filterData) {\n        setNumberSelected(response[0].phoneNumberId);\n      } else {\n        setNumberSelected(filterData?.phoneNumberId);\n      }\n  \n      setDataResponse(response);\n      saveToken(filterData?.tokenMeta);\n      setSelectedText(filterData?.nickname + \" - \" + (filterData?.phone || 'Sin número'));\n    } else {\n      setNumberSelected('0');\n    }\n  }\n\n  useEffect(() => {\n    getData();\n  }, []);\n\n/*  useEffect(() => {\n    if (numbersKey.length > 0 && hasAction) {\n      setSelectedText(numberSelected || numbersKey[0])\n    }\n  }, [numbersKey])*/\n\n  const toggleList = () => {\n    setHasAction(false)\n    setShowList(prevState => !prevState);\n  };\n\n  const handleSelect = (text: string, token: string, other: string) => {\n    onChangeChat(null)\n    setNumberSelected(text)\n    setSelectedText(text + \" \" + other);\n    setShowList(false);\n    saveToken(token)\n  };\n\n  return (\n    <Container onMouseLeave={() => setShowList(false)}>\n      <div onClick={toggleList}>\n        <Icon id=\"archivar\" className=\"search-icon\" />\n        <p>{selectedText.includes('undefined') ? initialNumber : selectedText}</p>\n        <span>{dataResponse?.length}</span>\n      </div>\n      {showList && (\n        <ContainerList>\n          {dataResponse?.map( (key:any) => \n              <li onClick={() => handleSelect(key.phoneNumberId, key.tokenMeta, (key.nickname + \" - \" + (key.phone || 'Sin número')) )} className={key.phoneNumberId === selectedText ? 'active' : ''}>\n                {' ' + key.nickname + \" - \" + (key.phone || 'Sin número')}\n              </li>\n          )}\n        </ContainerList>\n      )}\n    </Container>\n  );\n};\n"
+        }
+    ]
+}

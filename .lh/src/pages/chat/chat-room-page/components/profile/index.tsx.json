@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/chat/chat-room-page/components/profile/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1740156203599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1740156203599,
+            "name": "Commit-0",
+            "content": "import Icon from \"../../../../../common/components/icons\";\nimport {\n  AboutItem,\n  ActionSection,\n  ActionText,\n  Avatar,\n  AvatarWrapper,\n  Heading,\n  HeadingWrapper,\n  MediaButton,\n  MediaImage,\n  MediaImagesWrapper,\n  PersonalInfo,\n  ProfileName,\n  Section,\n  Wrapper,\n} from \"./styles\";\n\ntype ProfileSectionProps = {\n  name: string;\n  image: string;\n};\n\nexport default function ProfileSection(props: ProfileSectionProps) {\n  const { name, image } = props;\n\n  return (\n    <Wrapper>\n      <PersonalInfo>\n        <AvatarWrapper>\n          <Avatar src={image} alt=\"User Profile\" />\n        </AvatarWrapper>\n        <ProfileName>{name}</ProfileName>\n      </PersonalInfo>\n\n      <Section>\n        <HeadingWrapper>\n          <Heading>Media, Links and Documents</Heading>\n          <MediaButton>\n            <Icon id=\"rightArrow\" className=\"icon\" />\n          </MediaButton>\n        </HeadingWrapper>\n        <MediaImagesWrapper>\n          <MediaImage src=\"/assets/images/placeholder.jpeg\" alt=\"Media\" />\n          <MediaImage src=\"/assets/images/placeholder.jpeg\" alt=\"Media\" />\n          <MediaImage src=\"/assets/images/placeholder.jpeg\" alt=\"Media\" />\n        </MediaImagesWrapper>\n      </Section>\n\n      <Section>\n        <HeadingWrapper>\n          <Heading>About and phone number</Heading>\n        </HeadingWrapper>\n        <ul>\n          <AboutItem>\n            Everyone should learn how to program because it teaches you how to think.\n          </AboutItem>\n          <AboutItem>+123456789</AboutItem>\n        </ul>\n      </Section>\n\n      <ActionSection>\n        <Icon id=\"block\" className=\"icon\" />\n        <ActionText>Block</ActionText>\n      </ActionSection>\n      <ActionSection>\n        <Icon id=\"thumbsDown\" className=\"icon\" />\n        <ActionText>Report contact</ActionText>\n      </ActionSection>\n      <ActionSection>\n        <Icon id=\"delete\" className=\"icon\" />\n        <ActionText>Delete chat</ActionText>\n      </ActionSection>\n    </Wrapper>\n  );\n}\n"
+        }
+    ]
+}

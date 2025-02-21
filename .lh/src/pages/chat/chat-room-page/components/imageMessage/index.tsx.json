@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/pages/chat/chat-room-page/components/imageMessage/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1740155690949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740155697374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from 'react';\n import { Skeleton } from 'primereact/skeleton';\n-import Icon from '../../../../../../common/components/icons';\n+import Icon from '../../.common/components/icons';\n import { Dialog } from 'primereact/dialog';\n \n interface ImageMessageProps {\n     urlImage: string;\n"
+                },
+                {
+                    "date": 1740155718574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from 'react';\n import { Skeleton } from 'primereact/skeleton';\n-import Icon from '../../.common/components/icons';\n+import Icon from '../../../../../common/components/icons';\n import { Dialog } from 'primereact/dialog';\n \n interface ImageMessageProps {\n     urlImage: string;\n"
+                },
+                {
+                    "date": 1740155727606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from 'react';\n import { Skeleton } from 'primereact/skeleton';\n-import Icon from '../../../../../common/components/icons';\n+import Icon from '../../../../../../../../common/components/icons';\n import { Dialog } from 'primereact/dialog';\n \n interface ImageMessageProps {\n     urlImage: string;\n"
+                },
+                {
+                    "date": 1740155733376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from 'react';\n import { Skeleton } from 'primereact/skeleton';\n-import Icon from '../../../../../../../../common/components/icons';\n+import Icon from '../../../../../../../../../../../..common/components/icons';\n import { Dialog } from 'primereact/dialog';\n \n interface ImageMessageProps {\n     urlImage: string;\n"
+                },
+                {
+                    "date": 1740155741965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from 'react';\n import { Skeleton } from 'primereact/skeleton';\n-import Icon from '../../../../../../../../../../../..common/components/icons';\n+import Icon from '../../';\n import { Dialog } from 'primereact/dialog';\n \n interface ImageMessageProps {\n     urlImage: string;\n"
+                },
+                {
+                    "date": 1740155751941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from 'react';\n import { Skeleton } from 'primereact/skeleton';\n-import Icon from '../../';\n+import Icon from '../../../../../common/components/icons';\n import { Dialog } from 'primereact/dialog';\n \n interface ImageMessageProps {\n     urlImage: string;\n"
+                }
+            ],
+            "date": 1740155690949,
+            "name": "Commit-0",
+            "content": "import React, { useState } from 'react';\nimport { Skeleton } from 'primereact/skeleton';\nimport Icon from '../../../../../../common/components/icons';\nimport { Dialog } from 'primereact/dialog';\n\ninterface ImageMessageProps {\n    urlImage: string;\n    isDownload?: boolean;\n    onLoad: () => void;\n}\n\nconst ImageMessage: React.FC<ImageMessageProps> = ({ urlImage, isDownload, onLoad }) => {\n  const [visible, setVisible] = useState(false);\n\n  const zoomImage = () => {\n    setVisible(true)\n  }\n  \n  return (\n    <>\n    {\n      isDownload \n      ? <div className='chat_image'>\n          <img\n            src={urlImage}\n            alt=\"message\"\n            onClick={() => zoomImage()}\n            className=\"chat__msg-image\"\n            width={200}\n            onLoad={onLoad}\n          />\n\n          <Dialog  visible={visible} style={{ width: 'auto' }} onHide={() => {if (!visible) return; setVisible(false); }}>\n            <img\n              src={urlImage}\n              alt=\"message\"\n              onClick={() => zoomImage()}\n              className=\"chat__msg-image\"\n              onLoad={onLoad}\n            />\n          </Dialog>\n      </div>\n      :   <Skeleton height='320px' width='250px'/>\n      }\n    </>\n  );\n};\n\nexport default ImageMessage;\n"
+        }
+    ]
+}

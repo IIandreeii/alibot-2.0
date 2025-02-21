@@ -1,0 +1,40 @@
+.container {
+    background: linear-gradient(90deg, #000000 30.19%, #2D2E83 97.43%);
+    h2 {
+        @apply
+        h-80
+        flex
+        items-center
+        justify-center
+        text-4xl
+        font-bold
+        text-white
+        ;
+    }
+    &Detail {
+        @apply
+        bg-[#f3f4fe]
+        py-12
+        px-9
+        ;
+        > div {
+            @apply
+            max-w-5xl
+            m-auto ;
+            h4 {
+                @apply
+                    text-2xl
+                    font-bold
+                    mb-2
+                ;
+            }
+            p {
+                @apply
+                text-base
+                mb-6
+                text-justify
+                ;
+            }
+        }
+    }
+}

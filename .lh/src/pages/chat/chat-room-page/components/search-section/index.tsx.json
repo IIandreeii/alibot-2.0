@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/chat/chat-room-page/components/search-section/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1740157445167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740157453843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React, { useEffect, useRef, useState } from \"react\";\n import { Content, Search } from \"./styles\";\n import { IconContainer, Input, SearchWrapper } from \"../../../../../pages/chat/components/search-field/styles\";\n-import Icon from \"common/components/icons\";\n+import Icon from \"../../../../common/components/icons\";\n import MessagesList from \"../messages-list\";\n import useChatRoom from \"../../hooks/useChatRoom\";\n \n export default function SearchSection() {\n"
+                }
+            ],
+            "date": 1740157445167,
+            "name": "Commit-0",
+            "content": "import React, { useEffect, useRef, useState } from \"react\";\nimport { Content, Search } from \"./styles\";\nimport { IconContainer, Input, SearchWrapper } from \"../../../../../pages/chat/components/search-field/styles\";\nimport Icon from \"common/components/icons\";\nimport MessagesList from \"../messages-list\";\nimport useChatRoom from \"../../hooks/useChatRoom\";\n\nexport default function SearchSection() {\n  const [searchTerm, setsearchTerm] = useState(\"hola\")\n  const messagesListRef = useRef<HTMLDivElement>(null);  \n  const {\n    setShouldScrollToBottom,\n  } = useChatRoom();\n\n  const onSearchMessage = (e) => {\n    setsearchTerm(e.target.value)\n  }\n\n  useEffect(() => {\n    setsearchTerm(\"\")\n  }, [])\n\n  return (\n    <React.Fragment>\n       <SearchWrapper>\n        <IconContainer>\n          <Icon id=\"search\" className=\"search-icon\" />\n          <button className=\"search__back-btn\">\n            <Icon id=\"back\" />\n          </button>\n        </IconContainer>\n        <Input placeholder={ \"Buscar\"} onChange={(e) => onSearchMessage(e)} />\n      </SearchWrapper>\n      <Content>\n        {\n          searchTerm !== \"\"\n          && <MessagesList\n              ref={messagesListRef}\n              onMessagesLoaded={() => setShouldScrollToBottom(true)}\n              searchTerm={searchTerm}  \n              filterInChat={false}\n            />\n        }\n        \n      </Content>\n    </React.Fragment>\n  );\n}\n"
+        }
+    ]
+}

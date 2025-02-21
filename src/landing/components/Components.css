@@ -1,0 +1,45 @@
+.carousel-item {
+    align-items: flex-start;
+    -webkit-backdrop-filter: blur(4.5px);
+    backdrop-filter: blur(4.5px);
+    background: #3339;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 300px;
+    justify-content: space-between;
+    padding: 20px;
+    width: 210px;
+  }
+  
+  .carousel-item > p {
+    text-align: left;
+    color: white;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600; /* font-semibold */
+  }
+
+  .carousel-item__info p {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600; /* font-semibold */
+    margin-left: 12px; /* ml-3 */
+  }
+  
+  .carousel-item__info p img {
+    width: 1rem; /* w-4 */
+    height: fit-content;
+    margin-left: 12px; /* ml-3 */
+  }
+  
+  .carousel-item__info small {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600; 
+    margin-left: 12px; 
+  }  

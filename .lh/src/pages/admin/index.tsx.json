@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/pages/admin/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1740153162668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740153167884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Container, ContainerRow } from './styles';\n import { Sidebar } from './components/sidebar';\n import SidebarActions from './components/sidebarActions';\n import DynamicTable from './components/dynamicTable';\n-import { useTemplate } from '';\n+import { useTemplate } from '../';\n import { useSearchParams } from 'react-router-dom';\n import { Footer } from './components/footer';\n \n export const AdminPage = () => {\n"
+                },
+                {
+                    "date": 1740153173367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Container, ContainerRow } from './styles';\n import { Sidebar } from './components/sidebar';\n import SidebarActions from './components/sidebarActions';\n import DynamicTable from './components/dynamicTable';\n-import { useTemplate } from '../';\n+import { useTemplate } from '../../services';\n import { useSearchParams } from 'react-router-dom';\n import { Footer } from './components/footer';\n \n export const AdminPage = () => {\n"
+                }
+            ],
+            "date": 1740153162668,
+            "name": "Commit-0",
+            "content": "import React, { useEffect, useState } from 'react';\nimport { Header } from './components/header';\nimport { Container, ContainerRow } from './styles';\nimport { Sidebar } from './components/sidebar';\nimport SidebarActions from './components/sidebarActions';\nimport DynamicTable from './components/dynamicTable';\nimport { useTemplate } from '';\nimport { useSearchParams } from 'react-router-dom';\nimport { Footer } from './components/footer';\n\nexport const AdminPage = () => {\n    const [selectedPhone, setSelectedPhone] = useState<string>('');\n    const [isSidebarActionsOpen, setIsSidebarActionsOpen] = useState<boolean>(false);\n    const { getTemplate, getRespuestaRapida, getProductsToPni, getStore, getResponse, } = useTemplate();\n    const [searchParams, setSearchParams] = useSearchParams();\n    const [loaderService, setLoaderService] = useState(false);\n    const [tableHeader, setTableHeader] = useState([]);\n\n    const handleCardClick = (phone: string) => {\n        setSelectedPhone(phone);\n        setIsSidebarActionsOpen(true);\n    };\n\n    useEffect(() => {\n        switch (searchParams.get('acc')) {\n            case '1':\n                getTemplate(searchParams.get('id') || 1);\n                break;\n            case '2':\n                getRespuestaRapida(searchParams.get('id') || 1);\n                break;\n            case '4':\n                getProductsToPni(searchParams.get('id') || 1);\n                break;\n\n            default:\n                break;\n        }\n    }, [searchParams, loaderService]);\n\n    const CONFIG_TABLE = {\n        postURL: 'template/create',\n        editURL: 'template/update',\n        deleteURL: 'template/update'\n    };\n\n    return (\n        <Container>\n            <Header />\n            <ContainerRow>\n                <Sidebar onCardClick={handleCardClick} />\n                {searchParams.get('id') && <SidebarActions isOpen={isSidebarActionsOpen} selectedPhone={selectedPhone} />}\n                {searchParams.get('acc') && <DynamicTable data={getResponse} setLoaderService={setLoaderService} {...CONFIG_TABLE} />}\n            </ContainerRow>\n            <Footer />\n        </Container>\n    );\n};"
+        }
+    ]
+}

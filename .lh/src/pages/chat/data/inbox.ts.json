@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/chat/data/inbox.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1740155192991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1740155192991,
+            "name": "Commit-0",
+            "content": "import { Inbox } from \"../../../common/types/common.type\";\n\nexport const inbox: Inbox[] = [\n  {\n    id: \"38v8ury2e7eleynh2h3\",\n    name: \"John Smith\",\n    image: \"/assets/images/boy1.webp\",\n    lastMessage: \"Testing\",\n    notificationsCount: 5,\n    messageStatus: \"SENT\",\n    timestamp: \"08:21\",\n    isPinned: true,\n  },\n  {\n    id: \"38v8ury2e80leynh9lp\",\n    name: \"Jane Doe\",\n    image: \"/assets/images/boy2.jpeg\",\n    lastMessage: \"Hello there!\",\n    notificationsCount: 2,\n    messageStatus: \"SENT\",\n    timestamp: \"12:15\",\n    isPinned: true,\n    isOnline: true,\n  },\n  {\n    id: \"38v8ury2e8hleynhflu\",\n    name: \"Bob Johnson\",\n    image: \"/assets/images/boy3.jpeg\",\n    lastMessage: \"How are you?\",\n    notificationsCount: 0,\n    messageStatus: \"READ\",\n    timestamp: \"6:47\",\n  },\n  {\n    id: \"38v8ury2e8yleynhli9\",\n    name: \"Samantha Lee\",\n    image: \"/assets/images/girl1.jpeg\",\n    lastMessage: \"See you tomorrow!\",\n    messageStatus: \"SENT\",\n    timestamp: \"09:35\",\n  },\n  {\n    id: \"38v8ury2e9cleynhqgh\",\n    name: \"William Chen\",\n    image: \"/assets/images/boy4.jpeg\",\n    lastMessage: \"Thanks for your help!\",\n    messageStatus: \"DELIVERED\",\n    timestamp: \"5:22\",\n  },\n  {\n    id: \"38v8ury2ectleyniehz\",\n    name: \"Emily Kim\",\n    image: \"/assets/images/girl2.jpeg\",\n    lastMessage: \"Are you free tonight?\",\n    messageStatus: \"READ\",\n    timestamp: \"4:10\",\n    isOnline: true,\n  },\n  {\n    id: \"38v8ury2edbleynin0d\",\n    name: \"David Wong\",\n    image: \"/assets/images/boy5.webp\",\n    lastMessage: \"Let's meet at the park!\",\n    messageStatus: \"SENT\",\n    timestamp: \"13:48\",\n  },\n  {\n    id: \"38v8ury2edsleynisii\",\n    name: \"Karen Lee\",\n    image: \"/assets/images/girl.jpeg\",\n    lastMessage: \"I'll be there in 10 minutes.\",\n    messageStatus: \"DELIVERED\",\n    timestamp: \"08:56\",\n    isOnline: true,\n  },\n  {\n    id: \"38v8ury2ee6leynix43\",\n    name: \"Daniel Lee\",\n    image: \"/assets/images/boy6.webp\",\n    lastMessage: \"Can you send me the file?\",\n    messageStatus: \"READ\",\n    timestamp: \"19:03\",\n  },\n];\n"
+        }
+    ]
+}

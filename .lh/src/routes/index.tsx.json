@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/routes/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1740154413840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740154424564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import React from 'react';\n import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';\n \n import ChatProvider from '../pages/chat/context/chat';\n-import { InputProvider } from 'pages/chat/context/filter';\n-import { StateMessageProvider } from 'pages/chat/context/filterState';\n+import { InputProvider } from '../pages/chat/context/filter';\n+import { StateMessageProvider } from '../pages/chat/context/filterState';\n import { AdminPage } from 'pages/admin';\n import LoginForm from 'pages/auth/login';\n import PrivateRoute from './PrivateRoute';\n import { AuthProvider } from 'context/AuthContext';\n"
+                },
+                {
+                    "date": 1740154431274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n \n import ChatProvider from '../pages/chat/context/chat';\n import { InputProvider } from '../pages/chat/context/filter';\n import { StateMessageProvider } from '../pages/chat/context/filterState';\n-import { AdminPage } from 'pages/admin';\n-import LoginForm from 'pages/auth/login';\n+import { AdminPage } from '../pages/admin';\n+import LoginForm from '../pages/auth/login';\n import PrivateRoute from './PrivateRoute';\n import { AuthProvider } from 'context/AuthContext';\n import { ChatRoomPage, UnSelectedChatPage } from 'pages/chat';\n import { TokenUserProvider } from 'pages/chat/chat-room-page/hooks/useAuth';\n"
+                },
+                {
+                    "date": 1740154438551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n import { StateMessageProvider } from '../pages/chat/context/filterState';\n import { AdminPage } from '../pages/admin';\n import LoginForm from '../pages/auth/login';\n import PrivateRoute from './PrivateRoute';\n-import { AuthProvider } from 'context/AuthContext';\n-import { ChatRoomPage, UnSelectedChatPage } from 'pages/chat';\n+import { AuthProvider } from '../context/AuthContext';\n+import { ChatRoomPage, UnSelectedChatPage } from '../pages/chat';\n import { TokenUserProvider } from 'pages/chat/chat-room-page/hooks/useAuth';\n import { ToastProvider } from 'context/ToastContext';\n import { LandingPage } from 'landing';\n import TerminosPage from 'landing/pages/terminos';\n"
+                },
+                {
+                    "date": 1740154444693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n import LoginForm from '../pages/auth/login';\n import PrivateRoute from './PrivateRoute';\n import { AuthProvider } from '../context/AuthContext';\n import { ChatRoomPage, UnSelectedChatPage } from '../pages/chat';\n-import { TokenUserProvider } from 'pages/chat/chat-room-page/hooks/useAuth';\n-import { ToastProvider } from 'context/ToastContext';\n+import { TokenUserProvider } from '../pages/chat/chat-room-page/hooks/useAuth';\n+import { ToastProvider } from '../context/ToastContext';\n import { LandingPage } from 'landing';\n import TerminosPage from 'landing/pages/terminos';\n import PrivacidadPage from 'landing/pages/privacidad';\n \n"
+                },
+                {
+                    "date": 1740154453704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n import { AuthProvider } from '../context/AuthContext';\n import { ChatRoomPage, UnSelectedChatPage } from '../pages/chat';\n import { TokenUserProvider } from '../pages/chat/chat-room-page/hooks/useAuth';\n import { ToastProvider } from '../context/ToastContext';\n-import { LandingPage } from 'landing';\n-import TerminosPage from 'landing/pages/terminos';\n+import { LandingPage } from '../landing';\n+import TerminosPage from '../landing/pages/terminos';\n import PrivacidadPage from 'landing/pages/privacidad';\n \n const ChatPage = React.lazy(() => import('pages/chat/chat-room-page'));\n \n"
+                },
+                {
+                    "date": 1740154459839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,11 +12,11 @@\n import { TokenUserProvider } from '../pages/chat/chat-room-page/hooks/useAuth';\n import { ToastProvider } from '../context/ToastContext';\n import { LandingPage } from '../landing';\n import TerminosPage from '../landing/pages/terminos';\n-import PrivacidadPage from 'landing/pages/privacidad';\n+import PrivacidadPage from '../landing/pages/privacidad';\n \n-const ChatPage = React.lazy(() => import('pages/chat/chat-room-page'));\n+const ChatPage = React.lazy(() => import('../pages/chat/chat-room-page'));\n \n const router = createBrowserRouter([\n   {\n     path: '/init',\n"
+                },
+                {
+                    "date": 1740162542909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n import { AuthProvider } from '../context/AuthContext';\n import { ChatRoomPage, UnSelectedChatPage } from '../pages/chat';\n import { TokenUserProvider } from '../pages/chat/chat-room-page/hooks/useAuth';\n import { ToastProvider } from '../context/ToastContext';\n-import { LandingPage } from '..';\n+import { LandingPage } from '../';\n import TerminosPage from '../landing/pages/terminos';\n import PrivacidadPage from '../landing/pages/privacidad';\n \n const ChatPage = React.lazy(() => import('../pages/chat/chat-room-page'));\n"
+                }
+            ],
+            "date": 1740154413840,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';\n\nimport ChatProvider from '../pages/chat/context/chat';\nimport { InputProvider } from 'pages/chat/context/filter';\nimport { StateMessageProvider } from 'pages/chat/context/filterState';\nimport { AdminPage } from 'pages/admin';\nimport LoginForm from 'pages/auth/login';\nimport PrivateRoute from './PrivateRoute';\nimport { AuthProvider } from 'context/AuthContext';\nimport { ChatRoomPage, UnSelectedChatPage } from 'pages/chat';\nimport { TokenUserProvider } from 'pages/chat/chat-room-page/hooks/useAuth';\nimport { ToastProvider } from 'context/ToastContext';\nimport { LandingPage } from 'landing';\nimport TerminosPage from 'landing/pages/terminos';\nimport PrivacidadPage from 'landing/pages/privacidad';\n\nconst ChatPage = React.lazy(() => import('pages/chat/chat-room-page'));\n\nconst router = createBrowserRouter([\n  {\n    path: '/init',\n    element: \n    <PrivateRoute>\n      <UnSelectedChatPage />\n    </PrivateRoute>\n  },\n  {\n    path: '/chat',\n    element: (\n      <PrivateRoute>\n        <ChatPage />\n      </PrivateRoute>\n    ),\n  },\n  {\n    path: '/admin',\n    element: (\n      <PrivateRoute>\n        <AdminPage />\n      </PrivateRoute>\n    ),\n  },\n  {\n    path: '/login',\n    element: <LoginForm />,\n  },\n  {\n    path: '/',\n    element: <LandingPage />,\n  },\n  {\n    path: '/terminos',\n    element: <TerminosPage />,\n  },\n  {\n    path: '/privacidad',\n    element: <PrivacidadPage />,\n  },\n  {\n    path: '/:id', \n    element: (\n      <PrivateRoute>\n        <ChatRoomPage />\n      </PrivateRoute>\n    ),\n  },\n]);\n\nexport default function AppRoutes() {\n  return (\n    <AuthProvider>\n      <ToastProvider>\n        <TokenUserProvider>\n          <StateMessageProvider>\n            <InputProvider>\n              <ChatProvider>\n                <RouterProvider router={router} />\n              </ChatProvider>\n            </InputProvider>\n          </StateMessageProvider>\n        </TokenUserProvider>\n      </ToastProvider>\n    </AuthProvider>\n  );\n}\n"
+        }
+    ]
+}

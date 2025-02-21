@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/chat/components/search-field/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1740155448790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1740155455367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import Icon from \"../../../../common/components/icons\";\n import { SearchWrapper, IconContainer, Input } from \"./styles\";\n import { useContext } from \"react\";\n-import { InputContext } from \"pages/chat/context/filter\";\n+import { InputContext } from \"../../../pages/chat/context/filter\";\n \n type SearchFieldProps = {\n   placeholder?: string;\n   [x: string]: any;\n"
+                }
+            ],
+            "date": 1740155448790,
+            "name": "Commit-0",
+            "content": "import Icon from \"../../../../common/components/icons\";\nimport { SearchWrapper, IconContainer, Input } from \"./styles\";\nimport { useContext } from \"react\";\nimport { InputContext } from \"pages/chat/context/filter\";\n\ntype SearchFieldProps = {\n  placeholder?: string;\n  [x: string]: any;\n};\n\nexport default function SearchField(props: SearchFieldProps) {\n  const { placeholder, ...rest } = props;\n  const context = useContext(InputContext);\n\n  if (!context) {\n    throw new Error('InputComponent debe estar dentro de un InputProvider');\n  }\n\n  const { inputValue, setInputValue } = context;\n\n  const onFilterMessage = (e: React.ChangeEvent<HTMLInputElement>) => {\n    setInputValue(e.target.value);\n  };\n  const onClear = () => {\n    setInputValue(\"\")\n  }\n\n  return (\n    <SearchWrapper {...rest}>\n      <IconContainer>\n        <button className=\"search__back-btn\" onClick={() => onClear()}>\n          <Icon id=\"back\" />\n        </button>\n      </IconContainer>\n      <Input placeholder={placeholder ?? \"Buscar\"} value={inputValue} onChange={(e) => onFilterMessage(e)} />\n    </SearchWrapper>\n  );\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/common/components/map/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1740157606319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1740157606319,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}
