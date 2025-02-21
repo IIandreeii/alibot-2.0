@@ -12,7 +12,7 @@ export const Quote = () => {
       <div className="flex flex-col justify-center items-center gap-20">
 
       <div className="w-full flex justify-center">
-        <div className="w-[80%] flex justify-center items-center gap-10">
+        <div className="w-[80%] flex justify-center items-center gap-10 max-md:w-full max-md:flex-col-reverse">
           <div className="flex justify-end items-center">
             <video className="w-[55vh] max-h-full " controls>
               <source src="https://firebasestorage.googleapis.com/v0/b/alibot-6d746.appspot.com/o/videos-landing-alibot%2FAutomatizar.mp4?alt=media&token=f6935005-13c1-4aeb-aea0-5b51f55f2071" type="video/mp4" />
@@ -20,7 +20,7 @@ export const Quote = () => {
             </video>
           </div>
           <div className="flex flex-col items-baseline w-full h-full justify-center text-white gap-5">
-            <h5 className="text-[38px] leading-13">
+            <h5 className="text-[38px] leading-13 max-md:text-[25px] max-md:leading-8">
               Autoconfirmación de <strong>pedidos contra entrega</strong> para campañas de conversión por página.
             </h5>
             <ul className="list-disc pl-5 leading-9 text-lg">
@@ -29,7 +29,7 @@ export const Quote = () => {
               <li>Manejo de plantillas de confirmación.</li>
               <li>Integración con Aliclik.</li>
             </ul>
-            <div className="w-full flex justify-start mt-4">
+            <div className="w-full flex justify-start mt-4 max-md:justify-center">
               <CtaButton />
             </div>
           </div>
@@ -37,9 +37,9 @@ export const Quote = () => {
       </div>
 
       <div className="w-full flex justify-center">
-        <div className="w-[80%] flex justify-center items-center gap-10">
+        <div className="w-[80%] flex justify-center items-center gap-10 max-md:w-full max-md:flex-col">
           <div  className="flex flex-col items-baseline w-full h-full justify-center text-white gap-5">
-            <h5 className="text-[38px] leading-13">
+            <h5 className="text-[38px] leading-13 max-md:text-[25px] max-md:leading-8">
               Autoconfirmación de <strong>pedidos envíos por agencia</strong> (previo adelanto) para los campañas de conversión con página.
             </h5>
             <ul className="list-disc pl-5">
@@ -59,7 +59,7 @@ export const Quote = () => {
       </div>
 
       <div className="w-full flex justify-center">
-        <div className="w-[80%] flex justify-center items-center gap-10">
+        <div className="w-[80%] flex justify-center items-center gap-10 max-md:w-full max-md:flex-col-reverse">
           <div className="flex justify-end items-center">
             <video className="w-[55vh] max-h-full " controls>
               <source src="https://firebasestorage.googleapis.com/v0/b/alibot-6d746.appspot.com/o/videos-landing-alibot%2FWhatsapp.mp4?alt=media&token=decd7b61-1171-43c8-b970-7a352079a29f" type="video/mp4" />

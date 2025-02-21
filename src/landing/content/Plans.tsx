@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Custom.css'
 
 export const Plans = () => {
-    const [checked, setChecked] = useState(false)
     const [price,setPrice]=useState(99)
     const [select,setSelected]=useState('Pro')
 
@@ -29,7 +28,7 @@ useEffect(()=>{
         Elige el plan <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-blue-700">correcto </span> para ti
       </h3>
 
-      <div className="flex items-center w-full justify-center text-white ">
+      <div className="flex items-center w-full justify-center text-white max-md:flex-col">
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="flex flex-col md:flex-row">
             <div className={`cardCustom p-4 rounded-lg m-2 ${select === 'Bas' ? 'cardClick' : ''}`} onClick={() => handleClick('Bas')}>

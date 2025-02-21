@@ -62,7 +62,7 @@ export const Header = ({isPage = true}: Props) => {
 
         <ul className="flex items-center gap-10">
           <li>
-            <button className="text-white max-md:p-0 px-4 py-2 backdrop-filter backdrop-blur-lg bg-gradient-to-r from-purple-700 to-purple-700 rounded-lg">
+            <button className="text-white  px-4 py-2 backdrop-filter backdrop-blur-lg bg-gradient-to-r from-purple-700 to-purple-700 rounded-lg">
               <a href='https://alibot.app/login' target='_blank'>Iniciar Sesión</a>
             </button>
           </li>
